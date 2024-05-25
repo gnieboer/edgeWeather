@@ -1,5 +1,6 @@
 --[[
   Copyright 2022 Todd Austin
+  Copyright 2024 Geof Nieboer
 
   Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
   except in compliance with the License. You may obtain a copy of the License at:
@@ -61,8 +62,9 @@ local function issue_request(device, req_method, req_url, sendbody)
   end
   
   local sendheaders = {
-                        ["Acccept"] = '*/*',
+                        ["Accept"] = '*/*',
                         ["Host"] = sethost,
+                        ["User-Agent"] = 'GCNDevelopment weather app, gnieboer@gcndevelopment.com',
                         ["Content-Length"] = content_length,
                       }
   
